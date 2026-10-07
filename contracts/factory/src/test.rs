@@ -289,7 +289,7 @@ fn constructor_rejects_treasury_equal_to_admin() {
 
 #[test]
 fn set_treasury_rejects_admin_or_factory_address() {
-    let (env, admin, _, client) = setup(MAX_FEE_BPS);
+    let (_env, admin, _, client) = setup(MAX_FEE_BPS);
     let factory_addr = client.address.clone();
 
     let res_admin = client.try_set_treasury(&admin);
